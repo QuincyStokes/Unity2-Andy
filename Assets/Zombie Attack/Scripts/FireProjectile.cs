@@ -20,6 +20,7 @@ public class FireProjectile : MonoBehaviour
     void Start()
     {
         ammoCount = maxAmmo;
+        ammoText.text = $"Ammo: {ammoCount}";
     }
 
     void Update()
