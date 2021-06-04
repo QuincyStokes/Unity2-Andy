@@ -18,6 +18,7 @@ public class GuessTheNumberScript : MonoBehaviour
     void Start()
     {
         currentNumber = GenerateRandomNumber();
+        GenerateHints(currentNumber);
         numberOfGuesses = 0;
         score = 0;
     }
