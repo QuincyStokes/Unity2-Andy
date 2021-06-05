@@ -12,7 +12,6 @@ public class CannonballScript : MonoBehaviour
 
     private void Awake() 
     {
-        rb = GetComponent<Rigidbody>();
         // ADD CODE HERE
         
         // END OF CODE    
