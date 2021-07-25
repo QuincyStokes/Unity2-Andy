@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1190848477}
     m_Modifications:
+    - target: {fileID: 2259402110424552566, guid: 9a5bc37901e504a4cadf70979c9c75f6, type: 3}
+      propertyPath: m_text
+      value: Zombie Attack
+      objectReference: {fileID: 0}
     - target: {fileID: 3383767061153276770, guid: 9a5bc37901e504a4cadf70979c9c75f6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -332,6 +336,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1190848477}
     m_Modifications:
+    - target: {fileID: 2259402110424552566, guid: 9a5bc37901e504a4cadf70979c9c75f6, type: 3}
+      propertyPath: m_text
+      value: Stay in the Zone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2259402110424552566, guid: 9a5bc37901e504a4cadf70979c9c75f6, type: 3}
+      propertyPath: m_fontSize
+      value: 39.8
+      objectReference: {fileID: 0}
     - target: {fileID: 3383767061153276770, guid: 9a5bc37901e504a4cadf70979c9c75f6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -579,6 +591,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 82902019}
     m_Modifications:
+    - target: {fileID: 2259402110424552566, guid: 9a5bc37901e504a4cadf70979c9c75f6, type: 3}
+      propertyPath: m_text
+      value: Cannonball
+      objectReference: {fileID: 0}
     - target: {fileID: 3383767061153276770, guid: 9a5bc37901e504a4cadf70979c9c75f6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1476,6 +1492,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 82902019}
     m_Modifications:
+    - target: {fileID: 2259402110424552566, guid: 9a5bc37901e504a4cadf70979c9c75f6, type: 3}
+      propertyPath: m_text
+      value: Collect-a-thon
+      objectReference: {fileID: 0}
     - target: {fileID: 3383767061153276770, guid: 9a5bc37901e504a4cadf70979c9c75f6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
