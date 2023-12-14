@@ -57,22 +57,16 @@ public class ZoneScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) 
     {
-        // ADD CODE BELOW
-
-        // END OF CODE
+        // LESSON 3-2: Add code below.
     }
 
     private void OnTriggerStay(Collider other) 
     {
-        // ADD CODE BELOW
-
-        // END OF CODE
+        // LESSON 3-2: Add code below.
     }
 
     private void OnTriggerExit(Collider other) 
     {
-        // ADD CODE BELOW
-
-        // END OF CODE
+        // LESSON 3-2: Add code below.
     }
 }

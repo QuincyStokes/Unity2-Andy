@@ -27,8 +27,6 @@ public class ZombieScript : MonoBehaviour
 
     public void KillZombie()
     {
-        // ADD CODE HERE
-
-        // END OF CODE
+        // LESSON 3-3: Add code below.
     }
 }

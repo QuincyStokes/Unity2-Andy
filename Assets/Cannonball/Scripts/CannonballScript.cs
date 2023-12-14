@@ -12,26 +12,20 @@ public class CannonballScript : MonoBehaviour
 
     private void Awake() 
     {
-        // ADD CODE HERE
-        
-        // END OF CODE    
+        // LESSON 3-7: Add code below. 
     }
 
     public void Launch(CannonControlScript cannon, float power, float angle)
     {
         this.cannon = cannon;
 
-        // ADD CODE HERE
-
-        // END OF CODE
+        // LESSON 3-7: Add code below. 
     }
 
     // Update is called once per frame
     void Update()
     {
-        // ADD CODE HERE
-        
-        // END OF CODE
+        // LESSON 3-7: Add code below. 
     }
 
     private void OnCollisionEnter(Collision other) 
@@ -47,9 +41,8 @@ public class CannonballScript : MonoBehaviour
         foreach(var rayhit in Physics.SphereCastAll(transform.position,explosionRadius, transform.forward, explosionRadius*2))
         {
             DestructableBuilding block = rayhit.collider.GetComponent<DestructableBuilding>();
-            // ADD CODE HERE
-        
-            // END OF CODE
+            
+            // LESSON 3-7: Add code below. 
         }
     }
 }

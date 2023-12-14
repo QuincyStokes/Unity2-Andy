@@ -63,22 +63,16 @@ public class MovingPlatformScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) 
     {
-        // ADD CODE BELOW
-
-        // END OF CODE
+        // LESSON 3-2: Add code below.
     }
 
     private void OnCollisionStay(Collision other) 
     {
-        // ADD CODE BELOW
-        
-        // END OF CODE
+        // LESSON 3-2: Add code below.
     }
 
     private void OnCollisionExit(Collision other) 
     {
-        // ADD CODE BELOW
-
-        // END OF CODE
+        // LESSON 3-2: Add code below.
     }
 }

@@ -40,19 +40,15 @@ public class GuessTheNumberScript : MonoBehaviour
     {
         numberOfGuesses++;
         guessText.text = "You guessed " + guess + "\n";
-        // WRITE CODE BELOW
-
-        // END OF CODE
-
+        
+        // LESSON 3-1: Add code below.
     }
 
     public void GenerateHints(int chosenNumber)
     {
         string hints = "";
 
-        // WRITE CODE BELOW
-
-        // END OF CODE
+        // LESSON 3-1: Add code below.
 
         hintsText.text = hints;
     }

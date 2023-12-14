@@ -11,9 +11,7 @@ public class InventoryScript : MonoBehaviour
 
     bool inventoryShowing = false;
 
-    // ADD CODE HERE
-
-    // END OF CODE
+    // LESSON 3-5: Add variable below.
 
     void Start()
     {
@@ -50,15 +48,12 @@ public class InventoryScript : MonoBehaviour
     public void UpdateInventory()
     {
         DeleteOldItems();
-        // ADD CODE HERE
-
-        // END OF CODE
+       
+        // LESSON 3-6: Add code below.
     }
 
     private void OnTriggerEnter(Collider other) 
     {
-        // ADD CODE HERE
-
-        // END OF CODE
+        // LESSON 3-5: Add code below.
     }
 }

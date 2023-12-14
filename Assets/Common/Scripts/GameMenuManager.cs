@@ -28,7 +28,7 @@ public class GameMenuManager : MonoBehaviour
     {
         if(Input.GetKeyDown(pauseGameKey))
         {
-            // PLACE CODE BELOW
+            // LESSON 3-1: Add code below.
         }
     }
 

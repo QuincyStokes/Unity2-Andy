@@ -27,13 +27,12 @@ public class FireProjectile : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1") && ammoCount > 0)
         {
-            // ADD CODE HERE
+            // LESSON 3-3: Add code below.
 
-            // END OF CODE
             ammoText.text = $"Ammo: {ammoCount}";
         }
 
-
+        // LESSON 3-4: Add code below.
     }
 
     private void FireBullet(BulletScript bullet)
@@ -44,6 +43,10 @@ public class FireProjectile : MonoBehaviour
 
     public IEnumerator Reloading()
     {
+        // LESSON 3-4: Add code below.
+
         yield return new WaitForSeconds(0);
+        
+        // LESSON 3-4: Add code below.
     }
 }

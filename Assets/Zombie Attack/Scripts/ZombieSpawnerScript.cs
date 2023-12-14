@@ -14,6 +14,7 @@ public class ZombieSpawnerScript : MonoBehaviour
 
     void Start()
     {
+        // LESSON 3-4: Replace code below.
         SpawnZombie();
     }
 
@@ -24,13 +25,13 @@ public class ZombieSpawnerScript : MonoBehaviour
 
     public void SpawnZombie()
     {
-        // ADD CODE HERE
-
-        // END OF CODE
+        // LESSON 3-3: Add code below.
     }
 
     public void ZombieHasDied()
     {
         ZombieDied?.Invoke();
     }
+
+    // LESSON 3-4: Add coroutine below.
 }
