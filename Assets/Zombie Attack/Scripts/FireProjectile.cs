@@ -28,7 +28,10 @@ public class FireProjectile : MonoBehaviour
         if(Input.GetButtonDown("Fire1") && ammoCount > 0)
         {
             // LESSON 3-3: Add code below.
-
+            GameObject bullet = Instantiate(bulletPrefab);
+            Destroy(bullet, bulletActiveTime);
+            BulletScript bulletScript = bullet.GetComponent<BulletScript>();
+            
             ammoText.text = $"Ammo: {ammoCount}";
         }
 
