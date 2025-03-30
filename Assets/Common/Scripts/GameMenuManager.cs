@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class GameMenuManager : MonoBehaviour
 {
     public KeyCode pauseGameKey = KeyCode.Escape;
+    public KeyCode pauseGameKey1 = KeyCode.P;
+    public KeyCode resetGameKey = KeyCode.R;
+    public KeyCode quitGameKey = KeyCode.Q;
     public GameObject pauseMenu;
     
     private static bool isPaused = false;
@@ -26,7 +29,7 @@ public class GameMenuManager : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(pauseGameKey))
+        if(Input.GetKeyDown(pauseGameKey) || Input.GetKeyDown(pauseGameKey1))
         {
             if(isPaused)
             {
@@ -36,6 +39,17 @@ public class GameMenuManager : MonoBehaviour
             {
                 PauseGame();
             }
+        }
+
+        if(Input.GetKeyDown(resetGameKey) && isPaused)
+        {
+            ResetGame();
+        }
+
+
+        if(Input.GetKeyDown(quitGameKey) && isPaused)
+        {
+            QuitGame();
         }
     }
 
@@ -59,8 +73,8 @@ public class GameMenuManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void BackToMenu()
+    public void QuitGame()
     {
-        SceneManager.LoadScene(0);
+        Application.Quit();
     }
 }
