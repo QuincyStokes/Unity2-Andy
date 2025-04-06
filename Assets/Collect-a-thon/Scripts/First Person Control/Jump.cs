@@ -21,10 +21,12 @@ public class Jump : MonoBehaviour
         if (Input.GetKeyDown(jumpKey) && isGrounded)
         {
             rb.AddForce(rb.transform.up * jumpStrength, ForceMode.Impulse);
+
         }
+
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {

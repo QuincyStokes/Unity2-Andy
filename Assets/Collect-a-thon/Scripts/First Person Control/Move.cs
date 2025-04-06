@@ -6,8 +6,6 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     public float walkSpeed = 5;
-    public float runSpeed = 10;
-    public KeyCode runKey = KeyCode.LeftShift;
 
     private Rigidbody rb;
 
@@ -18,7 +16,7 @@ public class Move : MonoBehaviour
 
     void Update()
     {
-        float speed = Input.GetKey(runKey) ? runSpeed : walkSpeed;
+        float speed = walkSpeed;
 
         float inputX = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         float inputZ = Input.GetAxis("Vertical") * speed * Time.deltaTime;
