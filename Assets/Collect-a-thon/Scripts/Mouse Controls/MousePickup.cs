@@ -19,7 +19,7 @@ public class MousePickup : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetMouseButtonDown(1))
         {
             if (pickedUpItem == null)
             {

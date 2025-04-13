@@ -5,18 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody), typeof(AudioSource))]
 public class PickupItem : MonoBehaviour, IPickup
 {
-    public AudioClip pickupSound;
-    public AudioClip dropSound;
-
     private Transform oldParent;
     private Rigidbody rb;
-    private AudioSource source;
+    private Collider coll;
 
     void Start()
     {
         oldParent = transform.parent;
         rb = GetComponent<Rigidbody>();
-        source = GetComponent<AudioSource>();
+        coll = GetComponent<Collider>();
     }
 
     public void Pickup(Transform newParent)
@@ -25,18 +22,19 @@ public class PickupItem : MonoBehaviour, IPickup
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
 
+        coll.enabled = false;
+
         transform.SetParent(newParent);
 
         transform.localPosition = Vector3.zero;
         transform.localEulerAngles = Vector3.zero;
-        source.PlayOneShot(pickupSound);
     }
 
     public void Drop(float throwPower)
     {
         transform.SetParent(oldParent);
         rb.isKinematic = false;
-        rb.AddForce(transform.forward * throwPower, ForceMode.VelocityChange);
-        source.PlayOneShot(dropSound);
+        coll.enabled = true;
+        rb.AddForce(Camera.main.transform.forward * throwPower, ForceMode.VelocityChange);
     }
 }

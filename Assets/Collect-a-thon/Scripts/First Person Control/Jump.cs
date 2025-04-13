@@ -10,6 +10,7 @@ public class Jump : MonoBehaviour
 
     private Rigidbody rb;
     private bool isGrounded = true;
+    private string jumpTag;
 
     void Start()
     {
@@ -28,15 +29,16 @@ public class Jump : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Box"))
         {
+            jumpTag = collision.gameObject.tag;
             isGrounded = true;
         }
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag(jumpTag))
         {
             isGrounded = false;
         }
