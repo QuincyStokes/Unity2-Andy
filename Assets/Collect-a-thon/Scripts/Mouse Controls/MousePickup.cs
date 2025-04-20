@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MousePickup : MonoBehaviour
 {
-    public float range = 20;
+    public float range = 5;
     public float throwPower = 10;
     public Transform handTransform;
 
