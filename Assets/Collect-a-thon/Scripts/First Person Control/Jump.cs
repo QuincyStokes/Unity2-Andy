@@ -10,7 +10,7 @@ public class Jump : MonoBehaviour
 
     private Rigidbody rb;
     private bool isGrounded = true;
-    private string jumpTag;
+    private string     jumpTag;
 
     void Start()
     {
