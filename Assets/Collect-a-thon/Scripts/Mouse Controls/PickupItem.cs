@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody), typeof(AudioSource))]
 public class PickupItem : MonoBehaviour, IPickup
 {
     private Transform oldParent;
@@ -20,7 +19,7 @@ public class PickupItem : MonoBehaviour, IPickup
     {
         rb.isKinematic = true;
         rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
+        // rb.angularVelocity = Vector3.zero;
 
         coll.enabled = false;
 

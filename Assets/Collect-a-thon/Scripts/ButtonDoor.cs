@@ -26,7 +26,7 @@ public class ButtonDoor : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.CompareTag("Box"))
+        if(other.gameObject.CompareTag("Box") || other.gameObject.CompareTag("Player"))
         {
             touching = true;
             if(wall.transform.position.y < 15)
@@ -38,6 +38,12 @@ public class ButtonDoor : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
+
+        if(other.gameObject.CompareTag("Box") || other.gameObject.CompareTag("Player"))
+        {
+
         touching = false;
+
+        }
     }
 }

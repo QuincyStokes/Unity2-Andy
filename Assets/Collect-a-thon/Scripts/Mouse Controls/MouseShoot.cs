@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class MouseShoot : MonoBehaviour
 {
-    public float range = 20;
+    public float range = 10;
     public float damage = 10;
     public AudioClip fireSoundEffects;
 
@@ -20,7 +20,7 @@ public class MouseShoot : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetMouseButtonDown(0))
         {
             source.PlayOneShot(fireSoundEffects);
             Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
