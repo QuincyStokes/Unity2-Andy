@@ -6,6 +6,8 @@ public class ButtonDoor : MonoBehaviour
 {
     public GameObject wall;
     bool touching;
+    public float maxY;
+    public float minY;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,7 @@ public class ButtonDoor : MonoBehaviour
     {
         if(!touching)
         {
-            if(wall.transform.position.y > 7)
+            if(wall.transform.position.y > minY + 7)
             {
                 wall.transform.position -= new Vector3(0, 0.1f, 0);
             }
@@ -29,9 +31,13 @@ public class ButtonDoor : MonoBehaviour
         if(other.gameObject.CompareTag("Box") || other.gameObject.CompareTag("Player"))
         {
             touching = true;
-            if(wall.transform.position.y < 15)
+            if(wall.transform.position.y < maxY + 7)
             {
                 wall.transform.position += new Vector3(0, 0.1f, 0);
+            }
+            else
+            {
+                wall.transform.position = new Vector3 (wall.transform.position.x, maxY + 7, wall.transform.position.z);
             }
         }
     }
