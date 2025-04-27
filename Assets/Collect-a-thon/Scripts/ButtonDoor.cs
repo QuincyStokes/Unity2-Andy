@@ -6,6 +6,7 @@ public class ButtonDoor : MonoBehaviour
 {
     public GameObject wall;
     bool touching;
+    int frames;
     public float maxY;
     public float minY;
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class ButtonDoor : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        
         if(!touching)
         {
             if(wall.transform.position.y > minY + 7)
@@ -42,14 +44,4 @@ public class ButtonDoor : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider other)
-    {
-
-        if(other.gameObject.CompareTag("Box") || other.gameObject.CompareTag("Player"))
-        {
-
-        touching = false;
-
-        }
-    }
 }
