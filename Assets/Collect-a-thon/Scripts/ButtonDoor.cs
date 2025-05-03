@@ -5,7 +5,8 @@ using UnityEngine;
 public class ButtonDoor : MonoBehaviour
 {
     public GameObject wall;
-    bool touching;
+    float currentValue = 0f;
+    float oldValue = 0f;
     public float maxY;
     public float minY;
     // Start is called before the first frame update
@@ -17,20 +18,24 @@ public class ButtonDoor : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(!touching)
+        if(currentValue <= oldValue)
         {
+            
             if(wall.transform.position.y > minY + 7)
             {
                 wall.transform.position -= new Vector3(0, 0.1f, 0);
             }
         }
+        oldValue = currentValue;
+
     }
 
     void OnTriggerStay(Collider other)
     {
         if(other.gameObject.CompareTag("Box") || other.gameObject.CompareTag("Player"))
         {
-            touching = true;
+            currentValue += Time.fixedDeltaTime;
+
             if(wall.transform.position.y < maxY + 7)
             {
                 wall.transform.position += new Vector3(0, 0.1f, 0);
@@ -39,17 +44,6 @@ public class ButtonDoor : MonoBehaviour
             {
                 wall.transform.position = new Vector3 (wall.transform.position.x, maxY + 7, wall.transform.position.z);
             }
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-
-        if(other.gameObject.CompareTag("Box") || other.gameObject.CompareTag("Player"))
-        {
-
-        touching = false;
-
         }
     }
 }
