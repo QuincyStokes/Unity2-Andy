@@ -8,7 +8,7 @@ public class InventoryScript : MonoBehaviour
     public GameObject textPrefab;
     public GameObject inventoryPanel;
     public GameObject content;
-
+    public GameObject platform;
     bool inventoryShowing = false;
 
     // LESSON 3-5: Add variable below.
@@ -36,6 +36,10 @@ public class InventoryScript : MonoBehaviour
                 inventoryPanel.SetActive(true); 
                 UpdateInventory();
             }
+        }
+        if(inventory.Count == 3 && platform.activeSelf == false)
+        {
+            platform.SetActive(true);
         }
     }
 
